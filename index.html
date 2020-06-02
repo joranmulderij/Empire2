@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Empire 2</title>
+    <style>
+        div.main {
+            margin-left: auto;
+            margin-right: auto;
+            width: 700px;
+            border: solid 2px #5264ae;
+            padding: 0 5px 5px 5px;
+			cursor: url(icon-small.cur),auto;
+        }
+
+        @media only screen and (max-width: 900px) {
+            /* For mobile phones: */
+            div.main {
+                width: 100%;
+            }
+        }
+
+        body {
+            user-select: none;
+        }
+    </style>
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="material.css">
+    <link rel="stylesheet" type="text/css" href="snackbar.css">
+	<link rel="icon" href="icon.png" type="image/icon type">
+</head>
+<body>
+    <div class="main">
+        <h1 style="text-align:center; color:#364272">Empire 2</h1>
+
+        <p>
+            <div class="group">
+                <input id="namein" oninput="check('name')" type="text">
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Name</label>
+                <div id="nameerror" style="vertical-align:central" hidden="hidden">
+                    <img src="warning icon.png" alt="warning image" height="24" width="24">
+                    <span id="nameerrortext" style="color:#d93125; font:normal 12px times new roman; margin-left:10px; top:-8px; position:relative;"></span>
+                </div>
+            </div>
+        </p>
+        <p>
+            <div class="group">
+                <input id="iconin" oninput="check('icon')" type="text">
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Icon</label>
+                <div id="iconerror" style="vertical-align:central" hidden="hidden">
+                    <img src="warning icon.png" alt="warning image" height="24" width="24">
+                    <span id="iconerrortext" style="color:#d93125; font:normal 12px times new roman; margin-left:10px; top:-8px; position:relative;"></span>
+                </div>
+            </div>
+        </p>
+        <p>
+            <div class="group">
+                <input id="gamein" oninput="check('game')" type="text">
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Game Name</label>
+                <div id="gameerror" style="vertical-align:central" hidden="hidden">
+                    <img src="warning icon.png" alt="warning image" height="24" width="24">
+                    <span id="gameerrortext" style="color:#d93125; font:normal 12px times new roman; margin-left:10px; top:-8px; position:relative;"></span>
+                </div>
+            </div>
+        </p>
+        <p>
+            <button class="btn purple" type="button" onclick="add()"><span>Add Name</span></button>
+        </p>
+    </div>
+    <p style="text-align:center; color:#A0A0A0; font: normal 10px times new roman;">
+        Made by Joran Mulderij @2020
+    </p>
+    <p style="text-align:center; color:#A0A0A0; font: normal 10px times new roman;">
+        Version 2.6.4
+    </p>
+    <div id="snackbar">Your Name has been succesfully added!</div>
+</body>
+</html>

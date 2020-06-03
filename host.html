@@ -10,7 +10,55 @@
             width:700px;
             border: solid 2px #5264ae;
             padding: 0 5px 5px 5px;
+			/*animation: cursor_an 0.5s infinite;*/
+            cursor: url(cursor.png), auto;
         }
+
+
+
+		@keyframes cursor_an{
+		  0%{ 
+			cursor: url("cursor animation/image1.png"), auto;
+            rotation:90deg;
+		  }
+		  8.33%{ 
+			cursor: url("cursor animation/image2.png"), auto;
+		  }
+		  16.67%{ 
+			cursor: url("cursor animation/image3.png"), auto;
+		  }
+		  25%{ 
+			cursor: url("cursor animation/image4.png"), auto;
+		  }
+		  33.33%{ 
+			cursor: url("cursor animation/image5.png"), auto;
+		  }
+		  41.67%{ 
+			cursor: url("cursor animation/image6.png"), auto;
+		  }
+		  50%{ 
+			cursor: url("cursor animation/image7.png"), auto;
+		  }
+		  58.33%{ 
+			cursor: url("cursor animation/image8.png"), auto;
+		  }
+		  66.67%{ 
+			cursor: url("cursor animation/image9.png"), auto;
+		  }
+		  75%{ 
+			cursor: url("cursor animation/image10.png"), auto;
+		  }
+		  83.33%{ 
+			cursor: url("cursor animation/image11.png"), auto;
+		  }
+		  91.67%{ 
+			cursor: url("cursor animation/image12.png"), auto;
+		  }
+		  100%{ 
+			cursor: url("cursor animation/image1.png"), auto;
+		  }
+		  
+		}
 
         @media only screen and (max-width: 900px) {
             /* For mobile phones: */
@@ -30,8 +78,10 @@
     <meta name="viewport" content="width=40%, initial-scale=0.7">
 </head>
 <body>
-    <div class="main">
+    <div class="main" id="main">
         <h1 style="text-align:center; color:#364272">Empire 2 Host Page</h1>
+		
+		<img src="icon.jpg" alt="logo" width="68" height="68" style="float:right; margin-top:-75px">
 
         <p>
             <div class="group">
@@ -45,15 +95,15 @@
                 </div>
             </div>
         </p>
-        <button class="btn purple" type="button" onclick="start()"><span>Start Game</span></button>
-        <button class="btn purple" type="button" onclick="end()" style="float:right; margin-top:-50px"><span>End Game</span></button>
+        <button class="btn purple" type="button" onclick="start()" style="cursor:url(cursor.png), auto;"><span>Start Game</span></button>
+        <button class="btn purple" type="button" onclick="end()" style="float:right; margin-top:-50px; cursor: url(cursor.png), auto;"><span>End Game</span></button>
 
     </div>
     <p style="text-align:center; color:#A0A0A0; font: normal 10px times new roman;">
         Made by Joran Mulderij @2020
     </p>
     <p style="text-align:center; color:#A0A0A0; font: normal 10px times new roman;">
-        Version 2.6.3
+        Version 2.6.4
     </p>
     <div id="snackbar">Your Game has been succesfully started!</div>
 </body>

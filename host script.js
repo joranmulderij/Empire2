@@ -25,8 +25,19 @@ function check(entry) {
     return true;
 }
 
+function startcursorrotate() {
+    document.getElementById('main').style.animation = 'cursor_an 0.5s infinite';
+}
+
+function stopcursorrotate() {
+    document.getElementById('main').style.animation = '';
+    document.getElementById('main').style.cursor = 'url("icon-small.cur"), auto';
+}
+
 
 function talkall(names) {
+    names = names.split('#');
+    stopcursorrotate();
     if (names.length == 1) {
         alert(names[0]);
         return;
@@ -50,6 +61,7 @@ function talk(names) {
 }
 
 function succes(data) {
+    stopcursorrotate();
     if (data != "succes!") {
         alert(data);
         return;
@@ -70,6 +82,7 @@ function start() {
         return;
     }
 
+    startcursorrotate();
     fetch(`https://script.google.com/macros/s/AKfycbwFWA1dIUS5MNzViMYtNT97Z5l3PsiJgXpCXrw4GLauFBPH_V8/exec?mode=${mode}&name=${name}&icon=${icon}&game=${game}`)
         .then(response => response.text())
         .then(data => succes(data));
@@ -79,13 +92,14 @@ function end() {
     var name = '';
     var icon = '';
     var game = document.getElementById('gamein').value.toString().trim();
-    var mode = 'stop';
+    var mode = 'end';
 
     if (check('game')) {
         return;
     }
 
+    startcursorrotate();
     fetch(`https://script.google.com/macros/s/AKfycbwFWA1dIUS5MNzViMYtNT97Z5l3PsiJgXpCXrw4GLauFBPH_V8/exec?mode=${mode}&name=${name}&icon=${icon}&game=${game}`)
         .then(response => response.text())
-        .then(data => talkall(data.split('#')));
+        .then(data => talkall(data));
 }

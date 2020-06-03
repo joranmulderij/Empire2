@@ -10,8 +10,51 @@
             width: 700px;
             border: solid 2px #5264ae;
             padding: 0 5px 5px 5px;
-			cursor: url(icon-small.cur),auto;
+			cursor: url(cursor.png),auto;
         }
+		
+		@keyframes animate{
+		  0%{ 
+			cursor: url("image.png"), auto;
+		  }
+		  8.33%{ 
+			cursor: url("image(1).png"), auto;
+		  }
+		  16.67%{ 
+			cursor: url("image(2).png"), auto;
+		  }
+		  25%{ 
+			cursor: url("image(3).png"), auto;
+		  }
+		  33.33%{ 
+			cursor: url("image(4).png"), auto;
+		  }
+		  41.67%{ 
+			cursor: url("image(5).png"), auto;
+		  }
+		  50%{ 
+			cursor: url("image(6).png"), auto;
+		  }
+		  58.33%{ 
+			cursor: url("image(7).png"), auto;
+		  }
+		  66.67%{ 
+			cursor: url("image(8).png"), auto;
+		  }
+		  75%{ 
+			cursor: url("image(9).png"), auto;
+		  }
+		  83.33%{ 
+			cursor: url("image(10).png"), auto;
+		  }
+		  91.67%{ 
+			cursor: url("image(11).png"), auto;
+		  }
+		  100%{ 
+			cursor: url("image.png"), auto;
+		  }
+		  
+		}
 
         @media only screen and (max-width: 900px) {
             /* For mobile phones: */
@@ -32,6 +75,8 @@
 <body>
     <div class="main">
         <h1 style="text-align:center; color:#364272">Empire 2</h1>
+		
+		<img src="icon.jpg" alt="logo" width="68" height="68" style="float:right; margin-top:-75px">
 
         <p>
             <div class="group">
